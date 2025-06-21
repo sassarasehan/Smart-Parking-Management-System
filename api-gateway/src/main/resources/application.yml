@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    loadbalancer:
+      rule: random
+    gateway:
+        routes:
+          - id: user-service
+            #uri: http://localhost:8081
+            uri: lb://user-service
+            predicates:
+              - Path=/user-service/**
+
+          - id: vehicle-service
+            uri: lb://vehicle-service
+            predicates:
+              - Path=/vehicle-service/**
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
