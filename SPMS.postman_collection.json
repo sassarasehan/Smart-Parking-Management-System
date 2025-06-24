@@ -1,0 +1,613 @@
+{
+	"info": {
+		"_postman_id": "a8d17d49-dab1-4a2a-8162-273cf39514fa",
+		"name": "SPMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40383487"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Sehan Sassara\",\r\n  \"email\": \"sehan@gmail.com\",\r\n  \"role\": \"driver\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/user-service/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user-service/api/v1/users/getUserByID/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"users",
+								"getUserByID",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user-service/api/v1/users/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"users",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sassara\",\r\n    \"email\":\"sehansassara@gmail.com\",\r\n    \"role\":\"owner\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/user-service/api/v1/users/updateUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"users",
+								"updateUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user-service/api/v1/users/deleteUser/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"users",
+								"deleteUser",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sehansassara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/user-service/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user-service",
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vehicle",
+			"item": [
+				{
+					"name": "vehicle register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"licensePlate\": \"SSS-1234\",\r\n    \"make\": \"Toyota\",\r\n    \"model\": \"Corolla\",\r\n    \"color\": \"Red\",\r\n    \"type\": \"CAR\",\r\n    \"userId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicles by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"licensePlate\": \"ABC-1234\",\r\n  \"make\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"color\": \"Green\",\r\n  \"type\": \"Car\",\r\n  \"userId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vehicle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"licensePlate\": \"ABC-1234\",\r\n  \"make\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"color\": \"Red\",\r\n  \"type\": \"Car\",\r\n  \"userId\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete vehicle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle by Licene Plate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/vehicle-service/api/v1/vehicles/getVehicleByNo/DAS-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"vehicle-service",
+								"api",
+								"v1",
+								"vehicles",
+								"getVehicleByNo",
+								"DAS-1234"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "parking",
+			"item": [
+				{
+					"name": "save parking space",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"location\": \"Parking Lot A\",\r\n  \"available\": true,\r\n  \"status\": \"AVAILABLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/spaces/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"spaces",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all spaces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/spaces/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"spaces",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get available spaces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/spaces/available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"spaces",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reserve space and create reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/spaces/reserve/DAS-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"spaces",
+								"reserve",
+								"DAS-1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get active reservation by vehicle no",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/reservations/active/DAS-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"reservations",
+								"active",
+								"DAS-1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "release vehicle by vehicle no",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/spaces/release/DAS-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"spaces",
+								"release",
+								"DAS-1234"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/parking-service/api/v1/parking/reservations/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"parking-service",
+								"api",
+								"v1",
+								"parking",
+								"reservations",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "pay",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cardNumber\": \"4123456789012345\",\r\n  \"cardHolder\": \"John Doe\",\r\n  \"expiry\": \"12/25\",\r\n  \"cvv\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/payment-service/api/v1/transaction/process?licensePlate=SSS-1234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payment-service",
+								"api",
+								"v1",
+								"transaction",
+								"process"
+							],
+							"query": [
+								{
+									"key": "licensePlate",
+									"value": "SSS-1234"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

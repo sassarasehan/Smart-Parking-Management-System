@@ -94,6 +94,14 @@ public class VehicleServiceImpl implements VehicleService {
     }
 
     @Override
+    public VehicleDTO getVehicleByNo(String vehicleNo) {
+        return vehicleRepository.findByLicensePlate(vehicleNo)
+                .map(this::mapToDTO)
+                .orElse(null);
+    }
+
+
+    @Override
     public VehicleDTO updateVehicle(Long id, VehicleDTO vehicleDTO) {
         Vehicle existingVehicle = vehicleRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Vehicle not found"));
@@ -115,11 +123,11 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public boolean checkInVehicle(Long vehicleId, Long parkingSpaceId) {
-        return true; // Logic can be implemented later
+        return true;
     }
 
     @Override
     public boolean checkOutVehicle(Long vehicleId, Long parkingSpaceId) {
-        return true; // Logic can be implemented later
+        return true;
     }
 }

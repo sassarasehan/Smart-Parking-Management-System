@@ -9,6 +9,7 @@ public interface VehicleService {
     VehicleDTO getVehicleById(Long id);
     List<VehicleDTO> getAllVehicles();
     List<VehicleDTO> getVehiclesByUser(Long userId);
+    VehicleDTO getVehicleByNo(String vehicleNo);
     VehicleDTO updateVehicle(Long id, VehicleDTO vehicleDTO);
     void deleteVehicle(Long id);
     boolean checkInVehicle(Long vehicleId, Long parkingSpaceId);

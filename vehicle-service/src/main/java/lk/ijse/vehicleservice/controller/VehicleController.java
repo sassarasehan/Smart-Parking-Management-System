@@ -3,6 +3,8 @@ package lk.ijse.vehicleservice.controller;
 import lk.ijse.vehicleservice.dto.VehicleDTO;
 import lk.ijse.vehicleservice.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,6 +35,19 @@ public class VehicleController {
     public List<VehicleDTO> getVehiclesByUser(@PathVariable Long userId) {
         return vehicleService.getVehiclesByUser(userId);
     }
+
+    @GetMapping("/getVehicleByNo/{vehicleNo}")
+    public ResponseEntity<?> getByVehicleNo(@PathVariable String vehicleNo) {
+        VehicleDTO dto = vehicleService.getVehicleByNo(vehicleNo);
+        if (dto != null) {
+            return ResponseEntity.ok(dto);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Vehicle with number '" + vehicleNo + "' not found");
+        }
+    }
+
+
 
     @PutMapping("/{id}")
     public VehicleDTO updateVehicle(@PathVariable Long id, @RequestBody VehicleDTO vehicleDTO) {

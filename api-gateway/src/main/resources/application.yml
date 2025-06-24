@@ -17,6 +17,16 @@ spring:
             predicates:
               - Path=/vehicle-service/**
 
+          - id: parking-service
+            uri: lb://parking-service
+            predicates:
+              - Path=/parking-service/**
+
+          - id: payment-service
+            uri: lb://payment-service
+            predicates:
+              - Path=/payment-service/**
+
 
 eureka:
   client:
