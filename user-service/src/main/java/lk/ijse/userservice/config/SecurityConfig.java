@@ -19,8 +19,8 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/api/v1/users/**",
                                 "/api/v1/users/**"
-                        ).permitAll() // allow public
-                        .anyRequest().authenticated() // secure others
+                        ).permitAll()
+                        .anyRequest().authenticated()
                 );
 
         return http.build();

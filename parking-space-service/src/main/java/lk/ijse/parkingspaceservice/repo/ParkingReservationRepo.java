@@ -7,5 +7,4 @@ import java.util.List;
 
 public interface ParkingReservationRepo extends JpaRepository<ParkingReservation, String> {
     List<ParkingReservation> findByLicensePlate(String licensePlate);
-    List<ParkingReservation> findByActiveTrue();
 }

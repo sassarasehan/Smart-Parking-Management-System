@@ -15,8 +15,8 @@ public class Vehicle {
     private String make;
     private String model;
     private String color;
-    private String type; // CAR, MOTORBIKE, TRUCK, etc.
+    private String type;
     
     @Column(name = "user_id")
-    private Long userId; // Links to the user who owns this vehicle
+    private Long userId;
 }
