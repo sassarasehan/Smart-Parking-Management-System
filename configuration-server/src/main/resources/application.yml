@@ -12,7 +12,7 @@ spring:
         git:
           uri: https://github.com/sassarasehan/Smart-Parking-Management-System.git
           clone-on-start: true
-          default-label: main
+          default-label: master
           username: ${GITHUB_USERNAME}
           password: ${GITHUB_TOKEN}
           search-paths: '.'
